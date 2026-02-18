@@ -28,3 +28,12 @@ contract SimpleStorage {
         nameToFavoriteNumber[_name] = _favoriteNumber;
     }
 }
+
+contract StorageFactory {
+    SimpleStorage public simpleStorage;
+
+
+    function createSimpleStorageContract() public {
+        simpleStorage = new SimpleStorage();
+    }
+}
